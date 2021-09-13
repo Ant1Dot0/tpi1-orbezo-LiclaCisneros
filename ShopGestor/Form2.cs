@@ -17,5 +17,10 @@ namespace ShopGestor
             InitializeComponent();
         }
 
+        private void FormListar_Load(object sender, EventArgs e)
+        {
+            ArticuloNegocio negocio = new ArticuloNegocio();
+            DgvArticulos.DataSource = negocio.listar();
+        }
     }
 }
