@@ -22,5 +22,7 @@ namespace ShopGestor
             ArticuloNegocio negocio = new ArticuloNegocio();
             DgvArticulos.DataSource = negocio.listar();
         }
+
+        
     }
 }

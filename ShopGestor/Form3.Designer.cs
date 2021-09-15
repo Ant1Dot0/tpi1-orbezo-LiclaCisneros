@@ -30,13 +30,12 @@ namespace ShopGestor
         private void InitializeComponent()
         {
             this.lblBuscar = new System.Windows.Forms.Label();
-            this.DgvArticulos = new System.Windows.Forms.DataGridView();
             this.CbxCriterio = new System.Windows.Forms.ComboBox();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.BtnCancelar = new System.Windows.Forms.Button();
             this.PbxArticulo = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.DgvArticulos)).BeginInit();
+            this.txtResultado = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.PbxArticulo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,14 +48,6 @@ namespace ShopGestor
             this.lblBuscar.Size = new System.Drawing.Size(159, 26);
             this.lblBuscar.TabIndex = 2;
             this.lblBuscar.Text = "Buscar Artículo";
-            // 
-            // DgvArticulos
-            // 
-            this.DgvArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvArticulos.Location = new System.Drawing.Point(35, 104);
-            this.DgvArticulos.Name = "DgvArticulos";
-            this.DgvArticulos.Size = new System.Drawing.Size(357, 198);
-            this.DgvArticulos.TabIndex = 3;
             // 
             // CbxCriterio
             // 
@@ -84,6 +75,7 @@ namespace ShopGestor
             this.btnAceptar.TabIndex = 3;
             this.btnAceptar.Text = "ACEPTAR";
             this.btnAceptar.UseVisualStyleBackColor = false;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // BtnCancelar
             // 
@@ -104,21 +96,31 @@ namespace ShopGestor
             this.PbxArticulo.TabIndex = 8;
             this.PbxArticulo.TabStop = false;
             // 
+            // txtResultado
+            // 
+            this.txtResultado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtResultado.Location = new System.Drawing.Point(55, 104);
+            this.txtResultado.Multiline = true;
+            this.txtResultado.Name = "txtResultado";
+            this.txtResultado.ReadOnly = true;
+            this.txtResultado.Size = new System.Drawing.Size(337, 198);
+            this.txtResultado.TabIndex = 9;
+            // 
             // FormBuscar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(652, 324);
+            this.Controls.Add(this.txtResultado);
             this.Controls.Add(this.PbxArticulo);
             this.Controls.Add(this.BtnCancelar);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.CbxCriterio);
-            this.Controls.Add(this.DgvArticulos);
             this.Controls.Add(this.lblBuscar);
             this.Name = "FormBuscar";
             this.Text = "Buscar Artículo";
-            ((System.ComponentModel.ISupportInitialize)(this.DgvArticulos)).EndInit();
+            this.Load += new System.EventHandler(this.FormBuscar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PbxArticulo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -128,11 +130,11 @@ namespace ShopGestor
         #endregion
 
         private System.Windows.Forms.Label lblBuscar;
-        private System.Windows.Forms.DataGridView DgvArticulos;
         private System.Windows.Forms.ComboBox CbxCriterio;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Button BtnCancelar;
         private System.Windows.Forms.PictureBox PbxArticulo;
+        private System.Windows.Forms.TextBox txtResultado;
     }
 }
