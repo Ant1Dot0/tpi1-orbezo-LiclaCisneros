@@ -29,9 +29,15 @@ namespace ShopGestor
                     aux.nombre = (string)lector["Nombre"];
                     aux.descripcion = (string)lector["Descripcion"];
                     //aux.marca = (int)lector["IdMarca"];
-                    aux.descripcionMarca = (string)lector["Marca"];
+                    //aux.descripcionMarca = (string)lector["Marca"];
+                    aux.marca = new Marca();
+                    aux.marca.descripcion= (string)lector["Marca"];
+
                     //aux.categoria = (int)lector["IdCategoria"];
-                    aux.descripcionCategoria = (string)lector["Categoria"];
+                    //aux.descripcionCategoria = (string)lector["Categoria"];
+                    aux.categoria = new Categoria();
+                    aux.categoria.descripcion= (string)lector["Categoria"];
+
                     aux.Url = (string)lector["imagenUrl"];
                     aux.precio = (decimal)lector["Precio"];
                     lista.Add(aux);

@@ -23,6 +23,7 @@ namespace ShopGestor
             ArticuloNegocio negocio = new ArticuloNegocio();
             listaArticulo= negocio.listar();
             DgvArticulos.DataSource = listaArticulo;
+            DgvArticulos.Columns["Url"].Visible = false;
             cargarImagen(listaArticulo[0].Url);
         }
 

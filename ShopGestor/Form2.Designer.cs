@@ -41,41 +41,43 @@ namespace ShopGestor
             this.DgvArticulos.BackgroundColor = System.Drawing.SystemColors.Control;
             this.DgvArticulos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DgvArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvArticulos.Location = new System.Drawing.Point(16, 110);
-            this.DgvArticulos.Margin = new System.Windows.Forms.Padding(4);
+            this.DgvArticulos.Location = new System.Drawing.Point(21, 135);
+            this.DgvArticulos.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.DgvArticulos.Name = "DgvArticulos";
             this.DgvArticulos.RowHeadersWidth = 51;
-            this.DgvArticulos.Size = new System.Drawing.Size(476, 244);
+            this.DgvArticulos.Size = new System.Drawing.Size(635, 300);
             this.DgvArticulos.TabIndex = 0;
             // 
             // lblListar
             // 
             this.lblListar.AutoSize = true;
             this.lblListar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblListar.Location = new System.Drawing.Point(215, 30);
+            this.lblListar.Location = new System.Drawing.Point(287, 37);
+            this.lblListar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblListar.Name = "lblListar";
-            this.lblListar.Size = new System.Drawing.Size(199, 26);
+            this.lblListar.Size = new System.Drawing.Size(248, 31);
             this.lblListar.TabIndex = 1;
             this.lblListar.Text = "Listado de artículos";
             // 
             // PbxArticulo
             // 
-            this.PbxArticulo.Location = new System.Drawing.Point(556, 110);
-            this.PbxArticulo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PbxArticulo.Location = new System.Drawing.Point(741, 135);
+            this.PbxArticulo.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.PbxArticulo.Name = "PbxArticulo";
-            this.PbxArticulo.Size = new System.Drawing.Size(264, 244);
+            this.PbxArticulo.Size = new System.Drawing.Size(352, 300);
+            this.PbxArticulo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PbxArticulo.TabIndex = 2;
             this.PbxArticulo.TabStop = false;
             // 
             // FormListar
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(892, 391);
+            this.ClientSize = new System.Drawing.Size(1189, 481);
             this.Controls.Add(this.PbxArticulo);
             this.Controls.Add(this.lblListar);
             this.Controls.Add(this.DgvArticulos);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Name = "FormListar";
             this.Text = "Listar artículos";
             this.Load += new System.EventHandler(this.FormListar_Load);
