@@ -23,15 +23,17 @@ namespace ShopGestor
             ArticuloNegocio negocio = new ArticuloNegocio();
             listaArticulo= negocio.listar();
             DgvArticulos.DataSource = listaArticulo;
-            DgvArticulos.Columns["Url"].Visible = false;
-            cargarImagen(listaArticulo[0].Url);
-        }
 
+            DgvArticulos.Columns["Url"].Visible = false;
+            PbxArticulo.Load(listaArticulo[0].Url);
+            //cargarImagen(listaArticulo[0].Url);
+        }
+        /*
         private void DgvArticulos_SelectionChanged(object sender, EventArgs e)
         {
             Articulo seleccionado = (Articulo)DgvArticulos.CurrentRow.DataBoundItem;
             cargarImagen(seleccionado.Url);
-        }
+        }*/
 
         private void cargarImagen(string imagen)
         {
@@ -45,6 +47,10 @@ namespace ShopGestor
             }
         }
 
-        
+        private void DgvArticulos_SelectionChanged_1(object sender, EventArgs e)
+        {
+            Articulo seleccionado = (Articulo)DgvArticulos.CurrentRow.DataBoundItem;
+            cargarImagen(seleccionado.Url);
+        }
     }
 }

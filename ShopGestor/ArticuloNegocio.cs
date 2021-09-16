@@ -57,9 +57,7 @@ namespace ShopGestor
         {
             SqlConnection conexion = new SqlConnection();
             SqlCommand comando = new SqlCommand();
-            SqlDataReader lector;
-
-            
+            SqlDataReader lector;         
 
             try
             {

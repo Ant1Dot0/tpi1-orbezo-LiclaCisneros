@@ -42,11 +42,12 @@ namespace ShopGestor
             this.DgvArticulos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DgvArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvArticulos.Location = new System.Drawing.Point(21, 135);
-            this.DgvArticulos.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.DgvArticulos.Margin = new System.Windows.Forms.Padding(5);
             this.DgvArticulos.Name = "DgvArticulos";
             this.DgvArticulos.RowHeadersWidth = 51;
             this.DgvArticulos.Size = new System.Drawing.Size(635, 300);
             this.DgvArticulos.TabIndex = 0;
+            this.DgvArticulos.SelectionChanged += new System.EventHandler(this.DgvArticulos_SelectionChanged_1);
             // 
             // lblListar
             // 
@@ -62,7 +63,7 @@ namespace ShopGestor
             // PbxArticulo
             // 
             this.PbxArticulo.Location = new System.Drawing.Point(741, 135);
-            this.PbxArticulo.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.PbxArticulo.Margin = new System.Windows.Forms.Padding(5);
             this.PbxArticulo.Name = "PbxArticulo";
             this.PbxArticulo.Size = new System.Drawing.Size(352, 300);
             this.PbxArticulo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -77,7 +78,7 @@ namespace ShopGestor
             this.Controls.Add(this.PbxArticulo);
             this.Controls.Add(this.lblListar);
             this.Controls.Add(this.DgvArticulos);
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FormListar";
             this.Text = "Listar artículos";
             this.Load += new System.EventHandler(this.FormListar_Load);
