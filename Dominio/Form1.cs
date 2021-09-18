@@ -7,14 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Dominio;
-using Negocio;
 
-namespace ShopGestor
+namespace Dominio
 {
-    public partial class FormDetalle : Form
+    public partial class Form1 : Form
     {
-        public FormDetalle()
+        public Form1()
         {
             InitializeComponent();
         }

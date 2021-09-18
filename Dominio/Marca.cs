@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ShopGestor
+namespace Dominio
 {
-    class Marca
+    public class Marca
     {
         public int id {get; set;}
 

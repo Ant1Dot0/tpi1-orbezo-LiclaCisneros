@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ShopGestor
+namespace Dominio
 {
-    class Categoria
+    public class Categoria
     {
         public int id { get; set; }
 
