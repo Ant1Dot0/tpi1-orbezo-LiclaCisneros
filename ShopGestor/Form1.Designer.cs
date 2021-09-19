@@ -115,7 +115,7 @@ namespace ShopGestor
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.BtnListar);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "ShopGestor";
             this.ResumeLayout(false);
 
         }

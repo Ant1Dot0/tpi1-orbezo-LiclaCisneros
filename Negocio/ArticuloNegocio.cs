@@ -237,5 +237,35 @@ namespace Negocio
             }
             
         }
+        public void agregarArticulo(Articulo articulo)
+        {
+            SqlConnection conexion = new SqlConnection();
+            SqlCommand comando = new SqlCommand();
+            try
+            {
+                conexion.ConnectionString = "server=.\\SQLEXPRESS; database=CATALOGO_DB; integrated security=true";
+                comando.CommandType = System.Data.CommandType.Text;
+                comando.CommandText = "INSERT INTO articulos(Codigo, Nombre, Descripcion, IdMarca, IdCategoria, ImagenUrl, Precio) " +
+                    "VALUES (@codigo, @Nombre, @descripcion, @marca, @categoria, @imagen, @precio)";
+
+                comando.Parameters.AddWithValue("@codigo", articulo.codigo);
+                comando.Parameters.AddWithValue("@Nombre", articulo.nombre);
+                comando.Parameters.AddWithValue("@descripcion", articulo.descripcion);
+                comando.Parameters.AddWithValue("@marca", articulo.marca.id);
+                comando.Parameters.AddWithValue("@categoria", articulo.categoria.id);
+                comando.Parameters.AddWithValue("@imagen", articulo.Url);
+                comando.Parameters.AddWithValue("@precio", articulo.precio);
+
+                comando.Connection = conexion;
+                conexion.Open();
+                comando.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+        }
     }
 }
