@@ -44,16 +44,17 @@ namespace ShopGestor
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
-            this.btnExaminar = new System.Windows.Forms.Button();
             this.BtnCancelar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
+            this.lblId = new System.Windows.Forms.Label();
+            this.txtId = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lblAgregar
             // 
             this.lblAgregar.AutoSize = true;
             this.lblAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAgregar.Location = new System.Drawing.Point(283, 32);
+            this.lblAgregar.Location = new System.Drawing.Point(249, 20);
             this.lblAgregar.Name = "lblAgregar";
             this.lblAgregar.Size = new System.Drawing.Size(165, 26);
             this.lblAgregar.TabIndex = 2;
@@ -63,7 +64,7 @@ namespace ShopGestor
             // 
             this.lblCod.AutoSize = true;
             this.lblCod.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCod.Location = new System.Drawing.Point(77, 75);
+            this.lblCod.Location = new System.Drawing.Point(78, 104);
             this.lblCod.Name = "lblCod";
             this.lblCod.Size = new System.Drawing.Size(103, 17);
             this.lblCod.TabIndex = 3;
@@ -73,7 +74,7 @@ namespace ShopGestor
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(77, 104);
+            this.lblNombre.Location = new System.Drawing.Point(78, 133);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(58, 17);
             this.lblNombre.TabIndex = 4;
@@ -83,7 +84,7 @@ namespace ShopGestor
             // 
             this.lblDescripcion.AutoSize = true;
             this.lblDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescripcion.Location = new System.Drawing.Point(77, 135);
+            this.lblDescripcion.Location = new System.Drawing.Point(78, 164);
             this.lblDescripcion.Name = "lblDescripcion";
             this.lblDescripcion.Size = new System.Drawing.Size(82, 17);
             this.lblDescripcion.TabIndex = 5;
@@ -93,7 +94,7 @@ namespace ShopGestor
             // 
             this.lblMarca.AutoSize = true;
             this.lblMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMarca.Location = new System.Drawing.Point(77, 170);
+            this.lblMarca.Location = new System.Drawing.Point(78, 199);
             this.lblMarca.Name = "lblMarca";
             this.lblMarca.Size = new System.Drawing.Size(47, 17);
             this.lblMarca.TabIndex = 6;
@@ -103,7 +104,7 @@ namespace ShopGestor
             // 
             this.lblCategoria.AutoSize = true;
             this.lblCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCategoria.Location = new System.Drawing.Point(77, 202);
+            this.lblCategoria.Location = new System.Drawing.Point(78, 231);
             this.lblCategoria.Name = "lblCategoria";
             this.lblCategoria.Size = new System.Drawing.Size(69, 17);
             this.lblCategoria.TabIndex = 7;
@@ -113,7 +114,7 @@ namespace ShopGestor
             // 
             this.lblImagen.AutoSize = true;
             this.lblImagen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblImagen.Location = new System.Drawing.Point(77, 232);
+            this.lblImagen.Location = new System.Drawing.Point(78, 261);
             this.lblImagen.Name = "lblImagen";
             this.lblImagen.Size = new System.Drawing.Size(54, 17);
             this.lblImagen.TabIndex = 8;
@@ -123,7 +124,7 @@ namespace ShopGestor
             // 
             this.lblPrecio.AutoSize = true;
             this.lblPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrecio.Location = new System.Drawing.Point(77, 265);
+            this.lblPrecio.Location = new System.Drawing.Point(78, 294);
             this.lblPrecio.Name = "lblPrecio";
             this.lblPrecio.Size = new System.Drawing.Size(48, 17);
             this.lblPrecio.TabIndex = 9;
@@ -131,92 +132,104 @@ namespace ShopGestor
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(186, 75);
+            this.textBox1.Location = new System.Drawing.Point(187, 104);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 10;
+            this.textBox1.TabIndex = 2;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(186, 104);
+            this.textBox2.Location = new System.Drawing.Point(187, 133);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 11;
+            this.textBox2.TabIndex = 3;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(186, 134);
+            this.textBox3.Location = new System.Drawing.Point(187, 163);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 12;
+            this.textBox3.TabIndex = 4;
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(186, 169);
+            this.textBox4.Location = new System.Drawing.Point(187, 198);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 13;
+            this.textBox4.TabIndex = 5;
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(186, 199);
+            this.textBox5.Location = new System.Drawing.Point(187, 228);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 14;
+            this.textBox5.TabIndex = 6;
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(186, 231);
+            this.textBox6.Location = new System.Drawing.Point(187, 260);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(262, 20);
-            this.textBox6.TabIndex = 15;
+            this.textBox6.TabIndex = 7;
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(186, 264);
+            this.textBox7.Location = new System.Drawing.Point(187, 293);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(100, 20);
-            this.textBox7.TabIndex = 17;
-            // 
-            // btnExaminar
-            // 
-            this.btnExaminar.Location = new System.Drawing.Point(467, 229);
-            this.btnExaminar.Name = "btnExaminar";
-            this.btnExaminar.Size = new System.Drawing.Size(90, 23);
-            this.btnExaminar.TabIndex = 16;
-            this.btnExaminar.Text = "Examinar...";
-            this.btnExaminar.UseVisualStyleBackColor = true;
+            this.textBox7.TabIndex = 8;
             // 
             // BtnCancelar
             // 
             this.BtnCancelar.BackColor = System.Drawing.Color.Red;
             this.BtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.BtnCancelar.Location = new System.Drawing.Point(431, 340);
+            this.BtnCancelar.Location = new System.Drawing.Point(432, 353);
             this.BtnCancelar.Name = "BtnCancelar";
             this.BtnCancelar.Size = new System.Drawing.Size(75, 23);
             this.BtnCancelar.TabIndex = 19;
             this.BtnCancelar.Text = "CANCELAR";
             this.BtnCancelar.UseVisualStyleBackColor = false;
+            this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
             // btnAceptar
             // 
             this.btnAceptar.BackColor = System.Drawing.Color.LimeGreen;
             this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAceptar.Location = new System.Drawing.Point(186, 340);
+            this.btnAceptar.Location = new System.Drawing.Point(187, 353);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
             this.btnAceptar.TabIndex = 18;
             this.btnAceptar.Text = "ACEPTAR";
             this.btnAceptar.UseVisualStyleBackColor = false;
             // 
+            // lblId
+            // 
+            this.lblId.AutoSize = true;
+            this.lblId.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblId.Location = new System.Drawing.Point(78, 72);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(70, 17);
+            this.lblId.TabIndex = 20;
+            this.lblId.Text = "Id Artículo";
+            // 
+            // txtId
+            // 
+            this.txtId.Enabled = false;
+            this.txtId.Location = new System.Drawing.Point(187, 71);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(37, 20);
+            this.txtId.TabIndex = 1;
+            this.txtId.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // FormAgregar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(686, 450);
+            this.Controls.Add(this.txtId);
+            this.Controls.Add(this.lblId);
             this.Controls.Add(this.BtnCancelar);
             this.Controls.Add(this.btnAceptar);
-            this.Controls.Add(this.btnExaminar);
             this.Controls.Add(this.textBox7);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.textBox5);
@@ -234,6 +247,7 @@ namespace ShopGestor
             this.Controls.Add(this.lblAgregar);
             this.Name = "FormAgregar";
             this.Text = "Agregar Artículo";
+            this.Load += new System.EventHandler(this.FormAgregar_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -256,8 +270,9 @@ namespace ShopGestor
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.Button btnExaminar;
         private System.Windows.Forms.Button BtnCancelar;
         private System.Windows.Forms.Button btnAceptar;
+        private System.Windows.Forms.Label lblId;
+        private System.Windows.Forms.TextBox txtId;
     }
 }

@@ -52,6 +52,7 @@ namespace ShopGestor
             CbxCriterio.Items.AddRange(new String[]{ "id", "codigo", "nombre", "descripcion", "IdMarca", "idCategoria", "Precio"});
             CbxCriterio.SelectedIndex = 0;
             DgvResultado.DataSource = new List<Articulo>();
+            DgvResultado.Columns["url"].Visible = false;
         }
 
         private void BtnCancelar_Click(object sender, EventArgs e)

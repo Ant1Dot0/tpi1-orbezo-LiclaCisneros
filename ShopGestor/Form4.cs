@@ -18,5 +18,16 @@ namespace ShopGestor
         {
             InitializeComponent();
         }
+
+        private void FormAgregar_Load(object sender, EventArgs e)
+        {
+            ArticuloNegocio aux = new ArticuloNegocio();
+            txtId.Text = "" + aux.getMaxId();
+        }
+
+        private void BtnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -31,14 +31,13 @@ namespace ShopGestor
         {
             this.BtnCancelar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
-            this.btnExaminar = new System.Windows.Forms.Button();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtPrecio = new System.Windows.Forms.TextBox();
+            this.txtImagen = new System.Windows.Forms.TextBox();
+            this.txtCategoria = new System.Windows.Forms.TextBox();
+            this.txtMarca = new System.Windows.Forms.TextBox();
+            this.txtDescripcion = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtCodigoArt = new System.Windows.Forms.TextBox();
             this.lblPrecio = new System.Windows.Forms.Label();
             this.lblImagen = new System.Windows.Forms.Label();
             this.lblCategoria = new System.Windows.Forms.Label();
@@ -59,9 +58,10 @@ namespace ShopGestor
             this.BtnCancelar.Location = new System.Drawing.Point(438, 340);
             this.BtnCancelar.Name = "BtnCancelar";
             this.BtnCancelar.Size = new System.Drawing.Size(75, 23);
-            this.BtnCancelar.TabIndex = 37;
+            this.BtnCancelar.TabIndex = 11;
             this.BtnCancelar.Text = "CANCELAR";
             this.BtnCancelar.UseVisualStyleBackColor = false;
+            this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
             // btnAceptar
             // 
@@ -70,67 +70,58 @@ namespace ShopGestor
             this.btnAceptar.Location = new System.Drawing.Point(193, 340);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
-            this.btnAceptar.TabIndex = 36;
+            this.btnAceptar.TabIndex = 10;
             this.btnAceptar.Text = "ACEPTAR";
             this.btnAceptar.UseVisualStyleBackColor = false;
             // 
-            // btnExaminar
+            // txtPrecio
             // 
-            this.btnExaminar.Location = new System.Drawing.Point(476, 257);
-            this.btnExaminar.Name = "btnExaminar";
-            this.btnExaminar.Size = new System.Drawing.Size(90, 23);
-            this.btnExaminar.TabIndex = 34;
-            this.btnExaminar.Text = "Examinar...";
-            this.btnExaminar.UseVisualStyleBackColor = true;
+            this.txtPrecio.Location = new System.Drawing.Point(193, 293);
+            this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.Size = new System.Drawing.Size(100, 20);
+            this.txtPrecio.TabIndex = 9;
             // 
-            // textBox7
+            // txtImagen
             // 
-            this.textBox7.Location = new System.Drawing.Point(195, 292);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 20);
-            this.textBox7.TabIndex = 35;
+            this.txtImagen.Location = new System.Drawing.Point(195, 259);
+            this.txtImagen.Name = "txtImagen";
+            this.txtImagen.Size = new System.Drawing.Size(262, 20);
+            this.txtImagen.TabIndex = 8;
             // 
-            // textBox6
+            // txtCategoria
             // 
-            this.textBox6.Location = new System.Drawing.Point(195, 259);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(262, 20);
-            this.textBox6.TabIndex = 33;
+            this.txtCategoria.Location = new System.Drawing.Point(195, 227);
+            this.txtCategoria.Name = "txtCategoria";
+            this.txtCategoria.Size = new System.Drawing.Size(100, 20);
+            this.txtCategoria.TabIndex = 7;
             // 
-            // textBox5
+            // txtMarca
             // 
-            this.textBox5.Location = new System.Drawing.Point(195, 227);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 32;
+            this.txtMarca.Location = new System.Drawing.Point(195, 197);
+            this.txtMarca.Name = "txtMarca";
+            this.txtMarca.Size = new System.Drawing.Size(100, 20);
+            this.txtMarca.TabIndex = 6;
             // 
-            // textBox4
+            // txtDescripcion
             // 
-            this.textBox4.Location = new System.Drawing.Point(195, 197);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 31;
+            this.txtDescripcion.Location = new System.Drawing.Point(195, 162);
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(100, 20);
+            this.txtDescripcion.TabIndex = 5;
             // 
-            // textBox3
+            // txtNombre
             // 
-            this.textBox3.Location = new System.Drawing.Point(195, 162);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 30;
+            this.txtNombre.Location = new System.Drawing.Point(195, 132);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(100, 20);
+            this.txtNombre.TabIndex = 4;
             // 
-            // textBox2
+            // txtCodigoArt
             // 
-            this.textBox2.Location = new System.Drawing.Point(195, 132);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 29;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(195, 103);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 28;
+            this.txtCodigoArt.Location = new System.Drawing.Point(195, 103);
+            this.txtCodigoArt.Name = "txtCodigoArt";
+            this.txtCodigoArt.Size = new System.Drawing.Size(100, 20);
+            this.txtCodigoArt.TabIndex = 3;
             // 
             // lblPrecio
             // 
@@ -218,16 +209,16 @@ namespace ShopGestor
             this.lblBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBuscar.Location = new System.Drawing.Point(86, 67);
             this.lblBuscar.Name = "lblBuscar";
-            this.lblBuscar.Size = new System.Drawing.Size(103, 17);
+            this.lblBuscar.Size = new System.Drawing.Size(67, 17);
             this.lblBuscar.TabIndex = 38;
-            this.lblBuscar.Text = "Buscar Artículo";
+            this.lblBuscar.Text = "Buscar Id";
             // 
             // txtBuscar
             // 
             this.txtBuscar.Location = new System.Drawing.Point(193, 67);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(100, 20);
-            this.txtBuscar.TabIndex = 39;
+            this.txtBuscar.TabIndex = 1;
             // 
             // btnBuscar
             // 
@@ -236,9 +227,10 @@ namespace ShopGestor
             this.btnBuscar.Location = new System.Drawing.Point(319, 67);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(66, 23);
-            this.btnBuscar.TabIndex = 40;
+            this.btnBuscar.TabIndex = 2;
             this.btnBuscar.Text = "BUSCAR";
             this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // FormModificar
             // 
@@ -250,14 +242,13 @@ namespace ShopGestor
             this.Controls.Add(this.lblBuscar);
             this.Controls.Add(this.BtnCancelar);
             this.Controls.Add(this.btnAceptar);
-            this.Controls.Add(this.btnExaminar);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtPrecio);
+            this.Controls.Add(this.txtImagen);
+            this.Controls.Add(this.txtCategoria);
+            this.Controls.Add(this.txtMarca);
+            this.Controls.Add(this.txtDescripcion);
+            this.Controls.Add(this.txtNombre);
+            this.Controls.Add(this.txtCodigoArt);
             this.Controls.Add(this.lblPrecio);
             this.Controls.Add(this.lblImagen);
             this.Controls.Add(this.lblCategoria);
@@ -268,6 +259,7 @@ namespace ShopGestor
             this.Controls.Add(this.lblModificar);
             this.Name = "FormModificar";
             this.Text = "Modificar Artículo";
+            this.Load += new System.EventHandler(this.FormModificar_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -277,14 +269,13 @@ namespace ShopGestor
 
         private System.Windows.Forms.Button BtnCancelar;
         private System.Windows.Forms.Button btnAceptar;
-        private System.Windows.Forms.Button btnExaminar;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtPrecio;
+        private System.Windows.Forms.TextBox txtImagen;
+        private System.Windows.Forms.TextBox txtCategoria;
+        private System.Windows.Forms.TextBox txtMarca;
+        private System.Windows.Forms.TextBox txtDescripcion;
+        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.TextBox txtCodigoArt;
         private System.Windows.Forms.Label lblPrecio;
         private System.Windows.Forms.Label lblImagen;
         private System.Windows.Forms.Label lblCategoria;

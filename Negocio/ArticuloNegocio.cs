@@ -209,7 +209,7 @@ namespace Negocio
 
         }
 
-        public int ConseguirMaxId()
+        public int getMaxId()
         {
             SqlConnection conexion = new SqlConnection();
             SqlCommand comando = new SqlCommand();
@@ -229,7 +229,7 @@ namespace Negocio
                 maxId = (int)lector["Id"];
 
                 conexion.Close();
-                return maxId;
+                return ++maxId;
             }
             catch (Exception ex)
             {
