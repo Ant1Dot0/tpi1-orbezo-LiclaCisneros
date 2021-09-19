@@ -130,5 +130,83 @@ namespace Negocio
             }
             
         }
+
+        public List<Articulo> buscarArticuloXcriterio(Articulo articulo, int criterio)
+        {
+            List<Articulo> articulos = new List<Articulo>();
+            SqlConnection conexion = new SqlConnection();
+            SqlCommand comando = new SqlCommand();
+            SqlDataReader lector;
+
+            try
+            {
+                conexion.ConnectionString = "server=.\\SQLEXPRESS; database=CATALOGO_DB; integrated security=true";
+                comando.CommandType = System.Data.CommandType.Text;
+                comando.CommandText = "SELECT A.id, Codigo, Nombre, A.Descripcion AS DART, IdMarca, M.descripcion DMAR, IdCategoria, C.descripcion DCAT, ImagenUrl, Precio " +
+                     "FROM articulos A, marcas M, categorias C " +
+                    "WHERE (A.IdMarca = M.Id AND A.IdCategoria = c.Id) AND ";
+                switch (criterio)
+                {
+                    case 0:
+                        comando.CommandText += "A.id = @criterio";
+                        comando.Parameters.AddWithValue("@criterio", articulo.id);
+                        break;
+                    case 1:
+                        comando.CommandText += "Codigo = @criterio";
+                        comando.Parameters.AddWithValue("@criterio", articulo.codigo);
+                        break;
+                    case 2:
+                        comando.CommandText += "Nombre = @criterio";
+                        comando.Parameters.AddWithValue("@criterio", articulo.nombre);
+                        break;
+                    case 3:
+                        comando.CommandText += "Descripcion = @criterio";
+                        comando.Parameters.AddWithValue("@criterio", articulo.descripcion);
+                        break;
+                    case 4:
+                        comando.CommandText += "IdMarca = @criterio";
+                        comando.Parameters.AddWithValue("@criterio", articulo.marca.id);
+                        break;
+                    case 5:
+                        comando.CommandText += "IdCategoria = @criterio";
+                        comando.Parameters.AddWithValue("@criterio", articulo.categoria.id);
+                        break;
+                    case 6:
+                        comando.CommandText += "Precio = @criterio";
+                        comando.Parameters.AddWithValue("@criterio", articulo.precio);
+                        break;
+                }
+
+                comando.Connection = conexion;
+                conexion.Open();
+                lector = comando.ExecuteReader();
+                while (lector.Read())
+                {
+                    Articulo aux = new Articulo();
+                    aux.id = (int)lector["id"];
+                    aux.codigo = (string)lector["Codigo"];
+                    aux.nombre = (string)lector["Nombre"];
+                    aux.descripcion = (string)lector["DART"];
+                    aux.marca = new Marca();
+                    aux.marca.id = (int)lector["IdMarca"];
+                    aux.marca.descripcion = (string)lector["DMAR"];
+                    aux.categoria = new Categoria();
+                    aux.categoria.id = (int)lector["IdCategoria"];
+                    aux.categoria.descripcion = (string)lector["DCAT"];
+                    aux.Url = (string)lector["imagenUrl"];
+                    aux.precio = (decimal)lector["Precio"];
+
+                    articulos.Add(aux);
+                }
+                
+                conexion.Close();
+                return articulos;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+        }
     }
 }
