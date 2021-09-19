@@ -41,11 +41,8 @@ namespace ShopGestor
 
 
             ArticuloNegocio artNegocio = new ArticuloNegocio();
-            artNegocio.buscarArticulo(auxArticulo, indice);
-            if (auxArticulo.id != -1)
-                txtResultado.Text = auxArticulo.ToString();
-            else
-                txtResultado.Text = "No encontrado";
+            
+            DgvResultado.DataSource = artNegocio.buscarArticuloXcriterio(auxArticulo, indice);
 
 
         }
@@ -54,8 +51,30 @@ namespace ShopGestor
         {
             CbxCriterio.Items.AddRange(new String[]{ "id", "codigo", "nombre", "descripcion", "IdMarca", "idCategoria", "Precio"});
             CbxCriterio.SelectedIndex = 0;
+            DgvResultado.DataSource = new List<Articulo>();
         }
 
+        private void BtnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
 
+        private void cargarImagen(string imagen)
+        {
+            try
+            {
+                PbxArticulo.Load(imagen);
+            }
+            catch (Exception)
+            {
+                PbxArticulo.Load("https://media.istockphoto.com/vectors/image-place-holder-with-a-gray-camera-icon-vector-id1226328537?k=20&m=1226328537&s=612x612&w=0&h=2klft8QdMSyDj3oAmFyRyD24Mogj2OygLWrX9Lk6oGQ=");
+            }
+        }
+
+        private void DgvResultado_SelectionChanged(object sender, EventArgs e)
+        {
+            Articulo seleccionado = (Articulo)DgvResultado.CurrentRow.DataBoundItem;
+            cargarImagen(seleccionado.Url);
+        }
     }
 }

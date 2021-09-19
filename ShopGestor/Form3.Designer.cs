@@ -35,8 +35,9 @@ namespace ShopGestor
             this.btnAceptar = new System.Windows.Forms.Button();
             this.BtnCancelar = new System.Windows.Forms.Button();
             this.PbxArticulo = new System.Windows.Forms.PictureBox();
-            this.txtResultado = new System.Windows.Forms.TextBox();
+            this.DgvResultado = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.PbxArticulo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvResultado)).BeginInit();
             this.SuspendLayout();
             // 
             // lblBuscar
@@ -87,31 +88,32 @@ namespace ShopGestor
             this.BtnCancelar.TabIndex = 4;
             this.BtnCancelar.Text = "CANCELAR";
             this.BtnCancelar.UseVisualStyleBackColor = false;
+            this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
             // PbxArticulo
             // 
             this.PbxArticulo.Location = new System.Drawing.Point(429, 104);
             this.PbxArticulo.Name = "PbxArticulo";
             this.PbxArticulo.Size = new System.Drawing.Size(198, 198);
+            this.PbxArticulo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PbxArticulo.TabIndex = 8;
             this.PbxArticulo.TabStop = false;
             // 
-            // txtResultado
+            // DgvResultado
             // 
-            this.txtResultado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtResultado.Location = new System.Drawing.Point(55, 104);
-            this.txtResultado.Multiline = true;
-            this.txtResultado.Name = "txtResultado";
-            this.txtResultado.ReadOnly = true;
-            this.txtResultado.Size = new System.Drawing.Size(337, 198);
-            this.txtResultado.TabIndex = 9;
+            this.DgvResultado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvResultado.Location = new System.Drawing.Point(35, 104);
+            this.DgvResultado.Name = "DgvResultado";
+            this.DgvResultado.Size = new System.Drawing.Size(376, 198);
+            this.DgvResultado.TabIndex = 9;
+            this.DgvResultado.SelectionChanged += new System.EventHandler(this.DgvResultado_SelectionChanged);
             // 
             // FormBuscar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(652, 324);
-            this.Controls.Add(this.txtResultado);
+            this.Controls.Add(this.DgvResultado);
             this.Controls.Add(this.PbxArticulo);
             this.Controls.Add(this.BtnCancelar);
             this.Controls.Add(this.btnAceptar);
@@ -122,6 +124,7 @@ namespace ShopGestor
             this.Text = "Buscar Artículo";
             this.Load += new System.EventHandler(this.FormBuscar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PbxArticulo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvResultado)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -135,6 +138,6 @@ namespace ShopGestor
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Button BtnCancelar;
         private System.Windows.Forms.PictureBox PbxArticulo;
-        private System.Windows.Forms.TextBox txtResultado;
+        private System.Windows.Forms.DataGridView DgvResultado;
     }
 }

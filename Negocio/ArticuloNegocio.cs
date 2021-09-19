@@ -208,5 +208,34 @@ namespace Negocio
             }
 
         }
+
+        public int ConseguirMaxId()
+        {
+            SqlConnection conexion = new SqlConnection();
+            SqlCommand comando = new SqlCommand();
+            SqlDataReader lector;
+            int maxId;
+            try
+            {
+                conexion.ConnectionString = "server=.\\SQLEXPRESS; database=CATALOGO_DB; integrated security=true";
+                comando.CommandType = System.Data.CommandType.Text;
+                comando.CommandText = "SELECT Id FROM ARTICULOS where Id = (SELECT MAX(Id) FROM articulos)";
+                comando.Connection = conexion;
+                conexion.Open();
+                lector = comando.ExecuteReader();
+
+                lector.Read();
+
+                maxId = (int)lector["Id"];
+
+                conexion.Close();
+                return maxId;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            
+        }
     }
 }
