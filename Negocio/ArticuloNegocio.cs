@@ -331,5 +331,20 @@ namespace Negocio
                 throw ex;
             }
         }
+        public void eliminarArticulo(string id)
+        {
+            List<Articulo> auxiliar = new List<Articulo>();
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("DELETE FROM ARTICULOS WHERE ARTICULOS.Id = '" + id + "' ");
+                datos.ejecutarLectura();
+                datos.cerrarConexion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }
