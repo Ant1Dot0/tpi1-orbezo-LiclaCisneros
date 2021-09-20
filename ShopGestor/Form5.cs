@@ -37,6 +37,11 @@ namespace ShopGestor
                 txtMarca.Enabled = true;
                 txtPrecio.Enabled = true;
                 txtImagen.Enabled = true;
+
+
+                txtBuscar.Enabled = false;
+                btnAceptar.Enabled = true;
+
             }
             
 
@@ -69,6 +74,62 @@ namespace ShopGestor
             txtMarca.Enabled = false;
             txtPrecio.Enabled = false;
             txtImagen.Enabled = false;
+
+            btnAceptar.Enabled = false;
+        }
+
+        private void btnAceptar_Click(object sender, EventArgs e)
+        {
+            Articulo articulo = new Articulo();
+            ArticuloNegocio artNegocio = new ArticuloNegocio();
+            articulo.marca = new Marca();
+            articulo.categoria = new Categoria();
+
+            cargarArticulo(articulo);
+
+            artNegocio.modificarArticulo(articulo);
+
+            limpiarForm();
+
+            btnBuscar.Enabled = true;
+            txtBuscar.Enabled = true;
+
+        }
+
+        private void cargarArticulo(Articulo articulo)
+        {
+            articulo.id = int.Parse(txtBuscar.Text);
+            articulo.codigo = txtCodigoArt.Text;
+            articulo.nombre = txtNombre.Text;
+            articulo.descripcion = txtDescripcion.Text;
+            articulo.marca.id = int.Parse(txtMarca.Text);
+            articulo.categoria.id = int.Parse(txtCategoria.Text);
+            articulo.Url = txtImagen.Text;
+            articulo.precio = decimal.Parse(txtPrecio.Text);
+        }
+
+        private void limpiarForm()
+        {
+            ///deshabilitar txtBox y limpiarlos
+            txtBuscar.Text = "";
+            txtNombre.Text = "";
+            txtCodigoArt.Text = "";
+            txtDescripcion.Text = "";
+            txtMarca.Text = "";
+            txtCategoria.Text = "";
+            txtImagen.Text = "";
+            txtPrecio.Text = "";
+
+            txtNombre.Enabled = false;
+            txtCodigoArt.Enabled = false;
+            txtDescripcion.Enabled = false;
+            txtMarca.Enabled = false;
+            txtCategoria.Enabled = false;
+            txtImagen.Enabled = false;
+            txtPrecio.Enabled = false;
+
+            btnBuscar.Enabled = true;
+            btnAceptar.Enabled = false;
         }
     }
 }

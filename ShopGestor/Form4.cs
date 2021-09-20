@@ -70,19 +70,12 @@ namespace ShopGestor
             txtPrecio.Text = "";
 
             txtNombre.Enabled = false;
-            
             txtCodigo.Enabled = false;
-            
             txtDescripcion.Enabled = false;
-            
             txtMarca.Enabled = false;
-            
             txtCategoria.Enabled = false;
-            
             txtImagen.Enabled = false;
-            
             txtPrecio.Enabled = false;
-            
             btnNuevo.Enabled = true;
             btnAceptar.Enabled = false;
         }

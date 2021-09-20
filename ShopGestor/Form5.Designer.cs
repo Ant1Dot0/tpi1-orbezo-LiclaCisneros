@@ -73,6 +73,7 @@ namespace ShopGestor
             this.btnAceptar.TabIndex = 10;
             this.btnAceptar.Text = "ACEPTAR";
             this.btnAceptar.UseVisualStyleBackColor = false;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // txtPrecio
             // 
