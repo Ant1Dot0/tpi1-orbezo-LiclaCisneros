@@ -300,6 +300,36 @@ namespace Negocio
             }
         }
 
-        
+        public List<Articulo> mostrarDetalle(string id)
+        {
+            List<Articulo> auxiliar = new List<Articulo>();
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("SELECT Articulos.Id, Codigo, Nombre, ARTICULOS.Descripcion, MARCAS.Descripcion Marca, CATEGORIAS.Descripcion Categoria,ImagenUrl, Precio FROM ARTICULOS INNER JOIN MARCAS ON ARTICULOS.IdMarca = MARCAS.Id INNER JOIN CATEGORIAS ON ARTICULOS.IdCategoria = CATEGORIAS.Id WHERE ARTICULOS.Id='" + id + "'");
+                datos.ejecutarLectura();
+                while (datos.Lector.Read())
+                {
+                    Articulo aux = new Articulo();
+                    aux.id = (int)datos.Lector["Id"];
+                    aux.codigo = (string)datos.Lector["Codigo"];
+                    aux.nombre = (string)datos.Lector["Nombre"];
+                    aux.descripcion = (string)datos.Lector["Descripcion"];
+                    aux.marca = new Marca();
+                    aux.marca.descripcion = (string)datos.Lector["Marca"];
+                    aux.categoria = new Categoria();
+                    aux.categoria.descripcion = (string)datos.Lector["Categoria"];
+                    aux.Url = (string)datos.Lector["imagenUrl"];
+                    aux.precio = (decimal)datos.Lector["Precio"];
+                    auxiliar.Add(aux);
+                }
+                datos.cerrarConexion();
+                return auxiliar;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

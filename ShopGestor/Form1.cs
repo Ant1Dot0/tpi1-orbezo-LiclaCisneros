@@ -36,8 +36,8 @@ namespace ShopGestor
         private void btnDetalle_Click(object sender, EventArgs e)
         {
             ///VER DETALLE
-            FormDetalle form_ = new FormDetalle();
-            form_.ShowDialog();
+            Form8 formu = new Form8();
+            formu.ShowDialog();
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
