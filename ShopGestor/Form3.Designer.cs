@@ -52,11 +52,13 @@ namespace ShopGestor
             // 
             // CbxCriterio
             // 
+            this.CbxCriterio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CbxCriterio.FormattingEnabled = true;
             this.CbxCriterio.Location = new System.Drawing.Point(35, 62);
             this.CbxCriterio.Name = "CbxCriterio";
             this.CbxCriterio.Size = new System.Drawing.Size(121, 21);
             this.CbxCriterio.TabIndex = 1;
+            this.CbxCriterio.SelectionChangeCommitted += new System.EventHandler(this.CbxCriterio_SelectionChangeCommitted);
             // 
             // txtBuscar
             // 
@@ -112,6 +114,7 @@ namespace ShopGestor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.CadetBlue;
             this.ClientSize = new System.Drawing.Size(652, 324);
             this.Controls.Add(this.DgvResultado);
             this.Controls.Add(this.PbxArticulo);

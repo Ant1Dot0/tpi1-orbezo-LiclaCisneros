@@ -106,6 +106,9 @@ namespace ShopGestor
             articulo.descripcion = txtDescripcion.Text;
             articulo.Url = txtImagen.Text;
             articulo.precio = decimal.Parse(txtPrecio.Text);
+
+            articulo.categoria = (Categoria)CbxCategoria.SelectedItem;
+            articulo.marca = (Marca)CbxMarca.SelectedItem;
         }
 
         private void limpiarForm()

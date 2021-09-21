@@ -44,8 +44,6 @@ namespace ShopGestor
             this.txtPrecio = new System.Windows.Forms.TextBox();
             this.BtnCancelar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
-            this.lblId = new System.Windows.Forms.Label();
-            this.txtId = new System.Windows.Forms.TextBox();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.CbxCategoria = new System.Windows.Forms.ComboBox();
             this.CbxMarca = new System.Windows.Forms.ComboBox();
@@ -197,31 +195,11 @@ namespace ShopGestor
             this.btnAceptar.UseVisualStyleBackColor = false;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
-            // lblId
-            // 
-            this.lblId.AutoSize = true;
-            this.lblId.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblId.Location = new System.Drawing.Point(78, 72);
-            this.lblId.Name = "lblId";
-            this.lblId.Size = new System.Drawing.Size(70, 17);
-            this.lblId.TabIndex = 20;
-            this.lblId.Text = "Id Artículo";
-            // 
-            // txtId
-            // 
-            this.txtId.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtId.Enabled = false;
-            this.txtId.Location = new System.Drawing.Point(187, 71);
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(37, 20);
-            this.txtId.TabIndex = 1;
-            this.txtId.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // btnNuevo
             // 
-            this.btnNuevo.Location = new System.Drawing.Point(233, 69);
+            this.btnNuevo.Location = new System.Drawing.Point(187, 64);
             this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(54, 23);
+            this.btnNuevo.Size = new System.Drawing.Size(100, 23);
             this.btnNuevo.TabIndex = 21;
             this.btnNuevo.Text = "NUEVO";
             this.btnNuevo.UseVisualStyleBackColor = true;
@@ -249,12 +227,11 @@ namespace ShopGestor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.CadetBlue;
             this.ClientSize = new System.Drawing.Size(686, 450);
             this.Controls.Add(this.CbxMarca);
             this.Controls.Add(this.CbxCategoria);
             this.Controls.Add(this.btnNuevo);
-            this.Controls.Add(this.txtId);
-            this.Controls.Add(this.lblId);
             this.Controls.Add(this.BtnCancelar);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.txtPrecio);
@@ -295,8 +272,6 @@ namespace ShopGestor
         private System.Windows.Forms.TextBox txtPrecio;
         private System.Windows.Forms.Button BtnCancelar;
         private System.Windows.Forms.Button btnAceptar;
-        private System.Windows.Forms.Label lblId;
-        private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.ComboBox CbxCategoria;
         private System.Windows.Forms.ComboBox CbxMarca;

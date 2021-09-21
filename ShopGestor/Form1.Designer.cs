@@ -29,6 +29,7 @@ namespace ShopGestor
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.BtnListar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnDetalle = new System.Windows.Forms.Button();
@@ -40,6 +41,9 @@ namespace ShopGestor
             // BtnListar
             // 
             this.BtnListar.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.BtnListar.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.BtnListar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.BtnListar.ForeColor = System.Drawing.SystemColors.ControlText;
             this.BtnListar.Location = new System.Drawing.Point(108, 55);
             this.BtnListar.Name = "BtnListar";
             this.BtnListar.Size = new System.Drawing.Size(127, 74);
@@ -50,18 +54,20 @@ namespace ShopGestor
             // 
             // btnModificar
             // 
-            this.btnModificar.BackColor = System.Drawing.Color.AliceBlue;
+            this.btnModificar.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnModificar.Location = new System.Drawing.Point(331, 55);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(127, 74);
             this.btnModificar.TabIndex = 1;
-            this.btnModificar.Text = "MODFICAR";
+            this.btnModificar.Text = "MODIFICAR";
             this.btnModificar.UseVisualStyleBackColor = false;
             this.btnModificar.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnDetalle
             // 
             this.btnDetalle.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnDetalle.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDetalle.Location = new System.Drawing.Point(556, 55);
             this.btnDetalle.Name = "btnDetalle";
             this.btnDetalle.Size = new System.Drawing.Size(127, 74);
@@ -72,7 +78,8 @@ namespace ShopGestor
             // 
             // btnAgregar
             // 
-            this.btnAgregar.BackColor = System.Drawing.Color.AliceBlue;
+            this.btnAgregar.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAgregar.Location = new System.Drawing.Point(108, 188);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(127, 74);
@@ -84,6 +91,7 @@ namespace ShopGestor
             // btnEliminar
             // 
             this.btnEliminar.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEliminar.Location = new System.Drawing.Point(556, 188);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(127, 74);
@@ -95,6 +103,7 @@ namespace ShopGestor
             // btnBuscar
             // 
             this.btnBuscar.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnBuscar.Location = new System.Drawing.Point(331, 188);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(127, 74);
@@ -107,6 +116,8 @@ namespace ShopGestor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(848, 450);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.btnEliminar);
@@ -114,6 +125,7 @@ namespace ShopGestor
             this.Controls.Add(this.btnDetalle);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.BtnListar);
+            this.DoubleBuffered = true;
             this.Name = "Form1";
             this.Text = "ShopGestor";
             this.ResumeLayout(false);

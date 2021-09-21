@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using Dominio;
+﻿using Dominio;
 using Negocio;
+using System;
+using System.Collections.Generic;
+using System.Windows.Forms;
 
 namespace ShopGestor
 {
@@ -37,8 +31,6 @@ namespace ShopGestor
                 case 6: auxArticulo.precio = int.Parse(txtBuscar.Text); break;
 
             }
-            
-
 
             ArticuloNegocio artNegocio = new ArticuloNegocio();
             
@@ -76,6 +68,20 @@ namespace ShopGestor
         {
             Articulo seleccionado = (Articulo)DgvResultado.CurrentRow.DataBoundItem;
             cargarImagen(seleccionado.Url);
+        }
+
+        private void CbxCriterio_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            switch(CbxCriterio.SelectedIndex)
+            {
+                case 0: txtBuscar.Text = "Ingresar Id"; break;
+                case 1: txtBuscar.Text = "Ingresar Código"; break;
+                case 2: txtBuscar.Text = "Ingresar Nombre"; break;
+                case 3: txtBuscar.Text = "Ingresar Descripcion"; break; ;
+                case 4: txtBuscar.Text = "Ingresar Id Marca"; break;
+                case 5: txtBuscar.Text = "Ingresar Id Categoria"; break;
+                case 6: txtBuscar.Text = "Ingresar Precio"; break;
+            }
         }
     }
 }

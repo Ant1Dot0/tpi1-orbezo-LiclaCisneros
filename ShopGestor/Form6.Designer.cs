@@ -45,19 +45,17 @@ namespace ShopGestor
             // 
             this.lblEliminar.AutoSize = true;
             this.lblEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEliminar.Location = new System.Drawing.Point(519, 27);
-            this.lblEliminar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblEliminar.Location = new System.Drawing.Point(389, 22);
             this.lblEliminar.Name = "lblEliminar";
-            this.lblEliminar.Size = new System.Drawing.Size(111, 31);
+            this.lblEliminar.Size = new System.Drawing.Size(92, 26);
             this.lblEliminar.TabIndex = 21;
             this.lblEliminar.Text = "Eliminar";
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(443, 91);
-            this.txtID.Margin = new System.Windows.Forms.Padding(4);
+            this.txtID.Location = new System.Drawing.Point(332, 74);
             this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(132, 22);
+            this.txtID.Size = new System.Drawing.Size(100, 20);
             this.txtID.TabIndex = 40;
             this.txtID.Text = "id";
             // 
@@ -65,10 +63,9 @@ namespace ShopGestor
             // 
             this.btnBuscar.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnBuscar.Location = new System.Drawing.Point(584, 84);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBuscar.Location = new System.Drawing.Point(438, 68);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(93, 36);
+            this.btnBuscar.Size = new System.Drawing.Size(70, 29);
             this.btnBuscar.TabIndex = 41;
             this.btnBuscar.Text = "BUSCAR";
             this.btnBuscar.UseVisualStyleBackColor = false;
@@ -78,10 +75,9 @@ namespace ShopGestor
             // 
             this.BtnCancelar.BackColor = System.Drawing.Color.Red;
             this.BtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.BtnCancelar.Location = new System.Drawing.Point(595, 431);
-            this.BtnCancelar.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnCancelar.Location = new System.Drawing.Point(446, 350);
             this.BtnCancelar.Name = "BtnCancelar";
-            this.BtnCancelar.Size = new System.Drawing.Size(100, 28);
+            this.BtnCancelar.Size = new System.Drawing.Size(75, 23);
             this.BtnCancelar.TabIndex = 44;
             this.BtnCancelar.Text = "CANCELAR";
             this.BtnCancelar.UseVisualStyleBackColor = false;
@@ -91,10 +87,9 @@ namespace ShopGestor
             // 
             this.btnEliminar.BackColor = System.Drawing.Color.LimeGreen;
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnEliminar.Location = new System.Drawing.Point(334, 431);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEliminar.Location = new System.Drawing.Point(250, 350);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(100, 28);
+            this.btnEliminar.Size = new System.Drawing.Size(75, 23);
             this.btnEliminar.TabIndex = 43;
             this.btnEliminar.Text = "ACEPTAR";
             this.btnEliminar.UseVisualStyleBackColor = false;
@@ -103,18 +98,20 @@ namespace ShopGestor
             // dgvArticulos
             // 
             this.dgvArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvArticulos.Location = new System.Drawing.Point(12, 142);
+            this.dgvArticulos.Location = new System.Drawing.Point(9, 115);
+            this.dgvArticulos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvArticulos.Name = "dgvArticulos";
             this.dgvArticulos.RowHeadersWidth = 51;
             this.dgvArticulos.RowTemplate.Height = 24;
-            this.dgvArticulos.Size = new System.Drawing.Size(968, 255);
+            this.dgvArticulos.Size = new System.Drawing.Size(726, 207);
             this.dgvArticulos.TabIndex = 45;
             // 
             // pbImagen
             // 
-            this.pbImagen.Location = new System.Drawing.Point(986, 142);
+            this.pbImagen.Location = new System.Drawing.Point(740, 115);
+            this.pbImagen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pbImagen.Name = "pbImagen";
-            this.pbImagen.Size = new System.Drawing.Size(278, 255);
+            this.pbImagen.Size = new System.Drawing.Size(208, 207);
             this.pbImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbImagen.TabIndex = 46;
             this.pbImagen.TabStop = false;
@@ -122,16 +119,18 @@ namespace ShopGestor
             // lblMensaje
             // 
             this.lblMensaje.AutoSize = true;
-            this.lblMensaje.Location = new System.Drawing.Point(487, 475);
+            this.lblMensaje.Location = new System.Drawing.Point(365, 386);
+            this.lblMensaje.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMensaje.Name = "lblMensaje";
-            this.lblMensaje.Size = new System.Drawing.Size(0, 17);
+            this.lblMensaje.Size = new System.Drawing.Size(0, 13);
             this.lblMensaje.TabIndex = 47;
             // 
             // FormEliminar
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1266, 515);
+            this.BackColor = System.Drawing.Color.CadetBlue;
+            this.ClientSize = new System.Drawing.Size(950, 418);
             this.Controls.Add(this.lblMensaje);
             this.Controls.Add(this.pbImagen);
             this.Controls.Add(this.dgvArticulos);
@@ -140,7 +139,6 @@ namespace ShopGestor
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.lblEliminar);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormEliminar";
             this.Text = "Eliminar Artículo";
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).EndInit();

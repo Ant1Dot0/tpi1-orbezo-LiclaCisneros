@@ -47,7 +47,7 @@ namespace ShopGestor
 
         private void cargarArticulo(Articulo articulo)
         {
-            articulo.id = int.Parse(txtId.Text);
+
             articulo.codigo = txtCodigo.Text;
             articulo.nombre = txtNombre.Text;
             articulo.descripcion = txtDescripcion.Text;
@@ -62,7 +62,6 @@ namespace ShopGestor
         private void limpiarForm()
         {
             ///deshabilitar txtBox y limpiarlos
-            txtId.Text = "";
             txtNombre.Text = "";
             txtCodigo.Text = "";
             txtDescripcion.Text = "";
@@ -89,7 +88,6 @@ namespace ShopGestor
             CbxCategoria.DataSource = auxCategoriaNegocio.listar();
             CbxMarca.DataSource = auxMarcaNegocio.listar();
 
-            txtId.Text = "" + aux.getMaxId();
             btnNuevo.Enabled = false;
 
             ///habilitar txtBox para ingresar datos
