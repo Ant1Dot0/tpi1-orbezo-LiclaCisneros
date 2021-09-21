@@ -51,10 +51,12 @@ namespace ShopGestor
             articulo.codigo = txtCodigo.Text;
             articulo.nombre = txtNombre.Text;
             articulo.descripcion = txtDescripcion.Text;
-            articulo.marca.id = int.Parse(txtMarca.Text);
-            articulo.categoria.id = int.Parse(txtCategoria.Text);
             articulo.Url = txtImagen.Text;
             articulo.precio = decimal.Parse(txtPrecio.Text);
+
+            articulo.marca = (Marca)CbxMarca.SelectedItem;
+            articulo.categoria = (Categoria)CbxCategoria.SelectedItem;
+
         }
 
         private void limpiarForm()
@@ -64,25 +66,29 @@ namespace ShopGestor
             txtNombre.Text = "";
             txtCodigo.Text = "";
             txtDescripcion.Text = "";
-            txtMarca.Text = "";
-            txtCategoria.Text = "";
             txtImagen.Text = "";
             txtPrecio.Text = "";
-
+            
             txtNombre.Enabled = false;
             txtCodigo.Enabled = false;
             txtDescripcion.Enabled = false;
-            txtMarca.Enabled = false;
-            txtCategoria.Enabled = false;
             txtImagen.Enabled = false;
             txtPrecio.Enabled = false;
             btnNuevo.Enabled = true;
             btnAceptar.Enabled = false;
+            CbxCategoria.Enabled = false;
+            CbxMarca.Enabled = false;
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             ArticuloNegocio aux = new ArticuloNegocio();
+            MarcaNegocio auxMarcaNegocio = new MarcaNegocio();
+            CategoriaNegocio auxCategoriaNegocio = new CategoriaNegocio();
+
+            CbxCategoria.DataSource = auxCategoriaNegocio.listar();
+            CbxMarca.DataSource = auxMarcaNegocio.listar();
+
             txtId.Text = "" + aux.getMaxId();
             btnNuevo.Enabled = false;
 
@@ -90,12 +96,12 @@ namespace ShopGestor
             txtNombre.Enabled = true;
             txtCodigo.Enabled = true;
             txtDescripcion.Enabled = true;
-            txtMarca.Enabled = true;
-            txtCategoria.Enabled = true;
             txtImagen.Enabled = true;
             txtPrecio.Enabled = true;
 
             btnAceptar.Enabled = true;
+            CbxMarca.Enabled = true;
+            CbxCategoria.Enabled = true;
         }
     }
 }

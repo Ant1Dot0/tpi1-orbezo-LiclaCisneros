@@ -33,8 +33,6 @@ namespace ShopGestor
             this.btnAceptar = new System.Windows.Forms.Button();
             this.txtPrecio = new System.Windows.Forms.TextBox();
             this.txtImagen = new System.Windows.Forms.TextBox();
-            this.txtCategoria = new System.Windows.Forms.TextBox();
-            this.txtMarca = new System.Windows.Forms.TextBox();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtCodigoArt = new System.Windows.Forms.TextBox();
@@ -49,6 +47,8 @@ namespace ShopGestor
             this.lblBuscar = new System.Windows.Forms.Label();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
+            this.CbxMarca = new System.Windows.Forms.ComboBox();
+            this.CbxCategoria = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // BtnCancelar
@@ -88,20 +88,6 @@ namespace ShopGestor
             this.txtImagen.Name = "txtImagen";
             this.txtImagen.Size = new System.Drawing.Size(262, 20);
             this.txtImagen.TabIndex = 8;
-            // 
-            // txtCategoria
-            // 
-            this.txtCategoria.Location = new System.Drawing.Point(195, 227);
-            this.txtCategoria.Name = "txtCategoria";
-            this.txtCategoria.Size = new System.Drawing.Size(100, 20);
-            this.txtCategoria.TabIndex = 7;
-            // 
-            // txtMarca
-            // 
-            this.txtMarca.Location = new System.Drawing.Point(195, 197);
-            this.txtMarca.Name = "txtMarca";
-            this.txtMarca.Size = new System.Drawing.Size(100, 20);
-            this.txtMarca.TabIndex = 6;
             // 
             // txtDescripcion
             // 
@@ -233,11 +219,31 @@ namespace ShopGestor
             this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
+            // CbxMarca
+            // 
+            this.CbxMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CbxMarca.FormattingEnabled = true;
+            this.CbxMarca.Location = new System.Drawing.Point(195, 197);
+            this.CbxMarca.Name = "CbxMarca";
+            this.CbxMarca.Size = new System.Drawing.Size(121, 21);
+            this.CbxMarca.TabIndex = 39;
+            // 
+            // CbxCategoria
+            // 
+            this.CbxCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CbxCategoria.FormattingEnabled = true;
+            this.CbxCategoria.Location = new System.Drawing.Point(193, 229);
+            this.CbxCategoria.Name = "CbxCategoria";
+            this.CbxCategoria.Size = new System.Drawing.Size(121, 21);
+            this.CbxCategoria.TabIndex = 40;
+            // 
             // FormModificar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.CbxCategoria);
+            this.Controls.Add(this.CbxMarca);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.lblBuscar);
@@ -245,8 +251,6 @@ namespace ShopGestor
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.txtPrecio);
             this.Controls.Add(this.txtImagen);
-            this.Controls.Add(this.txtCategoria);
-            this.Controls.Add(this.txtMarca);
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.txtCodigoArt);
@@ -272,8 +276,6 @@ namespace ShopGestor
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.TextBox txtPrecio;
         private System.Windows.Forms.TextBox txtImagen;
-        private System.Windows.Forms.TextBox txtCategoria;
-        private System.Windows.Forms.TextBox txtMarca;
         private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtCodigoArt;
@@ -288,5 +290,7 @@ namespace ShopGestor
         private System.Windows.Forms.Label lblBuscar;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.ComboBox CbxMarca;
+        private System.Windows.Forms.ComboBox CbxCategoria;
     }
 }

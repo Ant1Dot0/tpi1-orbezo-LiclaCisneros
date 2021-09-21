@@ -56,17 +56,21 @@ namespace Negocio
 
         public Articulo buscarArticulo(Articulo articulo, int criterio)
         {
+
             SqlConnection conexion = new SqlConnection();
             SqlCommand comando = new SqlCommand();
             SqlDataReader lector;         
 
+
             try
             {
+                
                 conexion.ConnectionString = "server=.\\SQLEXPRESS; database=CATALOGO_DB; integrated security=true";
                 comando.CommandType = System.Data.CommandType.Text;
                 comando.CommandText = "SELECT A.id, Codigo, Nombre, A.Descripcion AS DART, IdMarca, M.descripcion DMAR, IdCategoria, C.descripcion DCAT, ImagenUrl, Precio " +
                      "FROM articulos A, marcas M, categorias C " +
                     "WHERE (A.IdMarca = M.Id AND A.IdCategoria = c.Id) AND ";
+  
                 switch (criterio)
                 {
                     case 0:

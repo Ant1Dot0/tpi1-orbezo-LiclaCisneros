@@ -33,11 +33,10 @@ namespace ShopGestor
                 txtCodigoArt.Enabled = true;
                 txtNombre.Enabled = true;
                 txtDescripcion.Enabled = true;
-                txtCategoria.Enabled = true;
-                txtMarca.Enabled = true;
                 txtPrecio.Enabled = true;
                 txtImagen.Enabled = true;
-
+                CbxCategoria.Enabled = true;
+                CbxMarca.Enabled = true;
 
                 txtBuscar.Enabled = false;
                 btnAceptar.Enabled = true;
@@ -49,13 +48,17 @@ namespace ShopGestor
 
         private void cargarTexto(Articulo articulo)
         {
+            MarcaNegocio auxMarca = new MarcaNegocio();
+            CategoriaNegocio auxCategoria = new CategoriaNegocio();
+
             txtCodigoArt.Text = articulo.codigo;
             txtNombre.Text = articulo.nombre;
             txtDescripcion.Text = articulo.descripcion;
-            txtMarca.Text = articulo.marca.ToString();
-            txtCategoria.Text = articulo.categoria.ToString();
             txtImagen.Text = articulo.Url;
             txtPrecio.Text = "" + (articulo.precio);
+
+            CbxCategoria.DataSource = auxCategoria.listar();
+            CbxMarca.DataSource = auxMarca.listar();
         }
 
         private void BtnCancelar_Click(object sender, EventArgs e)
@@ -70,11 +73,10 @@ namespace ShopGestor
             txtCodigoArt.Enabled = false;
             txtNombre.Enabled = false;
             txtDescripcion.Enabled = false;
-            txtCategoria.Enabled = false;
-            txtMarca.Enabled = false;
             txtPrecio.Enabled = false;
             txtImagen.Enabled = false;
-
+            CbxCategoria.Enabled = false;
+            CbxMarca.Enabled = false;
             btnAceptar.Enabled = false;
         }
 
@@ -102,8 +104,6 @@ namespace ShopGestor
             articulo.codigo = txtCodigoArt.Text;
             articulo.nombre = txtNombre.Text;
             articulo.descripcion = txtDescripcion.Text;
-            articulo.marca.id = int.Parse(txtMarca.Text);
-            articulo.categoria.id = int.Parse(txtCategoria.Text);
             articulo.Url = txtImagen.Text;
             articulo.precio = decimal.Parse(txtPrecio.Text);
         }
@@ -115,16 +115,12 @@ namespace ShopGestor
             txtNombre.Text = "";
             txtCodigoArt.Text = "";
             txtDescripcion.Text = "";
-            txtMarca.Text = "";
-            txtCategoria.Text = "";
             txtImagen.Text = "";
             txtPrecio.Text = "";
 
             txtNombre.Enabled = false;
             txtCodigoArt.Enabled = false;
             txtDescripcion.Enabled = false;
-            txtMarca.Enabled = false;
-            txtCategoria.Enabled = false;
             txtImagen.Enabled = false;
             txtPrecio.Enabled = false;
 
