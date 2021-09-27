@@ -164,16 +164,16 @@ namespace Negocio
                         comando.Parameters.AddWithValue("@criterio", articulo.nombre);
                         break;
                     case 3:
-                        comando.CommandText += "Descripcion = @criterio";
+                        comando.CommandText += "A.Descripcion = @criterio";
                         comando.Parameters.AddWithValue("@criterio", articulo.descripcion);
                         break;
                     case 4:
-                        comando.CommandText += "IdMarca = @criterio";
-                        comando.Parameters.AddWithValue("@criterio", articulo.marca.id);
+                        comando.CommandText += "M.descripcion = @criterio";
+                        comando.Parameters.AddWithValue("@criterio", articulo.marca.descripcion);
                         break;
                     case 5:
-                        comando.CommandText += "IdCategoria = @criterio";
-                        comando.Parameters.AddWithValue("@criterio", articulo.categoria.id);
+                        comando.CommandText += "C.descripcion = @criterio";
+                        comando.Parameters.AddWithValue("@criterio", articulo.categoria.descripcion);
                         break;
                     case 6:
                         comando.CommandText += "Precio = @criterio";

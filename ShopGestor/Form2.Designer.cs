@@ -32,6 +32,7 @@ namespace ShopGestor
             this.DgvArticulos = new System.Windows.Forms.DataGridView();
             this.lblListar = new System.Windows.Forms.Label();
             this.PbxArticulo = new System.Windows.Forms.PictureBox();
+            this.lblMensaje = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DgvArticulos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PbxArticulo)).BeginInit();
             this.SuspendLayout();
@@ -42,7 +43,7 @@ namespace ShopGestor
             this.DgvArticulos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DgvArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvArticulos.Location = new System.Drawing.Point(16, 110);
-            this.DgvArticulos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DgvArticulos.Margin = new System.Windows.Forms.Padding(4);
             this.DgvArticulos.Name = "DgvArticulos";
             this.DgvArticulos.RowHeadersWidth = 51;
             this.DgvArticulos.Size = new System.Drawing.Size(476, 244);
@@ -53,7 +54,7 @@ namespace ShopGestor
             // 
             this.lblListar.AutoSize = true;
             this.lblListar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblListar.Location = new System.Drawing.Point(215, 30);
+            this.lblListar.Location = new System.Drawing.Point(359, 29);
             this.lblListar.Name = "lblListar";
             this.lblListar.Size = new System.Drawing.Size(199, 26);
             this.lblListar.TabIndex = 1;
@@ -62,12 +63,22 @@ namespace ShopGestor
             // PbxArticulo
             // 
             this.PbxArticulo.Location = new System.Drawing.Point(556, 110);
-            this.PbxArticulo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PbxArticulo.Margin = new System.Windows.Forms.Padding(4);
             this.PbxArticulo.Name = "PbxArticulo";
             this.PbxArticulo.Size = new System.Drawing.Size(264, 244);
             this.PbxArticulo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PbxArticulo.TabIndex = 2;
             this.PbxArticulo.TabStop = false;
+            // 
+            // lblMensaje
+            // 
+            this.lblMensaje.AutoSize = true;
+            this.lblMensaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMensaje.Location = new System.Drawing.Point(1, 375);
+            this.lblMensaje.Name = "lblMensaje";
+            this.lblMensaje.Size = new System.Drawing.Size(10, 13);
+            this.lblMensaje.TabIndex = 3;
+            this.lblMensaje.Text = ".";
             // 
             // FormListar
             // 
@@ -76,11 +87,12 @@ namespace ShopGestor
             this.BackColor = System.Drawing.Color.CadetBlue;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(892, 391);
+            this.Controls.Add(this.lblMensaje);
             this.Controls.Add(this.PbxArticulo);
             this.Controls.Add(this.lblListar);
             this.Controls.Add(this.DgvArticulos);
             this.DoubleBuffered = true;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormListar";
             this.Text = "Listar artículos";
             this.Load += new System.EventHandler(this.FormListar_Load);
@@ -96,5 +108,6 @@ namespace ShopGestor
         private System.Windows.Forms.DataGridView DgvArticulos;
         private System.Windows.Forms.Label lblListar;
         private System.Windows.Forms.PictureBox PbxArticulo;
+        private System.Windows.Forms.Label lblMensaje;
     }
 }

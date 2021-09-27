@@ -22,12 +22,15 @@ namespace ShopGestor
 
         private void FormListar_Load(object sender, EventArgs e)
         {
+
             ArticuloNegocio negocio = new ArticuloNegocio();
             listaArticulo= negocio.listar();
             DgvArticulos.DataSource = listaArticulo;
 
             DgvArticulos.Columns["Url"].Visible = false;
+            DgvArticulos.Columns["Id"].Visible = false;
             PbxArticulo.Load(listaArticulo[0].Url);
+            lblMensaje.Text = "Hay " + listaArticulo.Count + " artículos";
             //cargarImagen(listaArticulo[0].Url);
         }
         /*

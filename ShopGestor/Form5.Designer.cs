@@ -44,18 +44,17 @@ namespace ShopGestor
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblCod = new System.Windows.Forms.Label();
             this.lblModificar = new System.Windows.Forms.Label();
-            this.lblBuscar = new System.Windows.Forms.Label();
-            this.txtBuscar = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.CbxMarca = new System.Windows.Forms.ComboBox();
             this.CbxCategoria = new System.Windows.Forms.ComboBox();
+            this.lblMensaje = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // BtnCancelar
             // 
             this.BtnCancelar.BackColor = System.Drawing.Color.Red;
             this.BtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.BtnCancelar.Location = new System.Drawing.Point(438, 340);
+            this.BtnCancelar.Location = new System.Drawing.Point(443, 310);
             this.BtnCancelar.Name = "BtnCancelar";
             this.BtnCancelar.Size = new System.Drawing.Size(75, 23);
             this.BtnCancelar.TabIndex = 11;
@@ -67,7 +66,7 @@ namespace ShopGestor
             // 
             this.btnAceptar.BackColor = System.Drawing.Color.LimeGreen;
             this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAceptar.Location = new System.Drawing.Point(193, 340);
+            this.btnAceptar.Location = new System.Drawing.Point(198, 310);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
             this.btnAceptar.TabIndex = 10;
@@ -77,35 +76,35 @@ namespace ShopGestor
             // 
             // txtPrecio
             // 
-            this.txtPrecio.Location = new System.Drawing.Point(193, 293);
+            this.txtPrecio.Location = new System.Drawing.Point(200, 260);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(100, 20);
             this.txtPrecio.TabIndex = 9;
             // 
             // txtImagen
             // 
-            this.txtImagen.Location = new System.Drawing.Point(195, 259);
+            this.txtImagen.Location = new System.Drawing.Point(200, 229);
             this.txtImagen.Name = "txtImagen";
             this.txtImagen.Size = new System.Drawing.Size(262, 20);
             this.txtImagen.TabIndex = 8;
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(195, 162);
+            this.txtDescripcion.Location = new System.Drawing.Point(200, 132);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(100, 20);
             this.txtDescripcion.TabIndex = 5;
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(195, 132);
+            this.txtNombre.Location = new System.Drawing.Point(200, 102);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(100, 20);
             this.txtNombre.TabIndex = 4;
             // 
             // txtCodigoArt
             // 
-            this.txtCodigoArt.Location = new System.Drawing.Point(195, 103);
+            this.txtCodigoArt.Location = new System.Drawing.Point(200, 73);
             this.txtCodigoArt.Name = "txtCodigoArt";
             this.txtCodigoArt.Size = new System.Drawing.Size(100, 20);
             this.txtCodigoArt.TabIndex = 3;
@@ -114,7 +113,7 @@ namespace ShopGestor
             // 
             this.lblPrecio.AutoSize = true;
             this.lblPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrecio.Location = new System.Drawing.Point(86, 293);
+            this.lblPrecio.Location = new System.Drawing.Point(91, 263);
             this.lblPrecio.Name = "lblPrecio";
             this.lblPrecio.Size = new System.Drawing.Size(48, 17);
             this.lblPrecio.TabIndex = 27;
@@ -124,7 +123,7 @@ namespace ShopGestor
             // 
             this.lblImagen.AutoSize = true;
             this.lblImagen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblImagen.Location = new System.Drawing.Point(86, 260);
+            this.lblImagen.Location = new System.Drawing.Point(91, 230);
             this.lblImagen.Name = "lblImagen";
             this.lblImagen.Size = new System.Drawing.Size(54, 17);
             this.lblImagen.TabIndex = 26;
@@ -134,7 +133,7 @@ namespace ShopGestor
             // 
             this.lblCategoria.AutoSize = true;
             this.lblCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCategoria.Location = new System.Drawing.Point(86, 230);
+            this.lblCategoria.Location = new System.Drawing.Point(91, 200);
             this.lblCategoria.Name = "lblCategoria";
             this.lblCategoria.Size = new System.Drawing.Size(69, 17);
             this.lblCategoria.TabIndex = 25;
@@ -144,7 +143,7 @@ namespace ShopGestor
             // 
             this.lblMarca.AutoSize = true;
             this.lblMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMarca.Location = new System.Drawing.Point(86, 198);
+            this.lblMarca.Location = new System.Drawing.Point(91, 168);
             this.lblMarca.Name = "lblMarca";
             this.lblMarca.Size = new System.Drawing.Size(47, 17);
             this.lblMarca.TabIndex = 24;
@@ -154,7 +153,7 @@ namespace ShopGestor
             // 
             this.lblDescripcion.AutoSize = true;
             this.lblDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescripcion.Location = new System.Drawing.Point(86, 163);
+            this.lblDescripcion.Location = new System.Drawing.Point(91, 133);
             this.lblDescripcion.Name = "lblDescripcion";
             this.lblDescripcion.Size = new System.Drawing.Size(82, 17);
             this.lblDescripcion.TabIndex = 23;
@@ -164,7 +163,7 @@ namespace ShopGestor
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(86, 132);
+            this.lblNombre.Location = new System.Drawing.Point(91, 102);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(58, 17);
             this.lblNombre.TabIndex = 22;
@@ -174,7 +173,7 @@ namespace ShopGestor
             // 
             this.lblCod.AutoSize = true;
             this.lblCod.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCod.Location = new System.Drawing.Point(86, 103);
+            this.lblCod.Location = new System.Drawing.Point(91, 73);
             this.lblCod.Name = "lblCod";
             this.lblCod.Size = new System.Drawing.Size(103, 17);
             this.lblCod.TabIndex = 21;
@@ -190,30 +189,13 @@ namespace ShopGestor
             this.lblModificar.TabIndex = 20;
             this.lblModificar.Text = "Modificar Artículo";
             // 
-            // lblBuscar
-            // 
-            this.lblBuscar.AutoSize = true;
-            this.lblBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBuscar.Location = new System.Drawing.Point(86, 67);
-            this.lblBuscar.Name = "lblBuscar";
-            this.lblBuscar.Size = new System.Drawing.Size(67, 17);
-            this.lblBuscar.TabIndex = 38;
-            this.lblBuscar.Text = "Buscar Id";
-            // 
-            // txtBuscar
-            // 
-            this.txtBuscar.Location = new System.Drawing.Point(193, 67);
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(100, 20);
-            this.txtBuscar.TabIndex = 1;
-            // 
             // btnBuscar
             // 
             this.btnBuscar.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnBuscar.Location = new System.Drawing.Point(319, 67);
+            this.btnBuscar.Location = new System.Drawing.Point(317, 71);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(66, 23);
+            this.btnBuscar.Size = new System.Drawing.Size(74, 23);
             this.btnBuscar.TabIndex = 2;
             this.btnBuscar.Text = "BUSCAR";
             this.btnBuscar.UseVisualStyleBackColor = false;
@@ -223,7 +205,7 @@ namespace ShopGestor
             // 
             this.CbxMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CbxMarca.FormattingEnabled = true;
-            this.CbxMarca.Location = new System.Drawing.Point(195, 197);
+            this.CbxMarca.Location = new System.Drawing.Point(200, 167);
             this.CbxMarca.Name = "CbxMarca";
             this.CbxMarca.Size = new System.Drawing.Size(121, 21);
             this.CbxMarca.TabIndex = 39;
@@ -232,22 +214,31 @@ namespace ShopGestor
             // 
             this.CbxCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CbxCategoria.FormattingEnabled = true;
-            this.CbxCategoria.Location = new System.Drawing.Point(193, 229);
+            this.CbxCategoria.Location = new System.Drawing.Point(200, 199);
             this.CbxCategoria.Name = "CbxCategoria";
             this.CbxCategoria.Size = new System.Drawing.Size(121, 21);
             this.CbxCategoria.TabIndex = 40;
+            // 
+            // lblMensaje
+            // 
+            this.lblMensaje.AutoSize = true;
+            this.lblMensaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMensaje.Location = new System.Drawing.Point(1, 378);
+            this.lblMensaje.Name = "lblMensaje";
+            this.lblMensaje.Size = new System.Drawing.Size(10, 13);
+            this.lblMensaje.TabIndex = 41;
+            this.lblMensaje.Text = ".";
             // 
             // FormModificar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CadetBlue;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(772, 392);
+            this.Controls.Add(this.lblMensaje);
             this.Controls.Add(this.CbxCategoria);
             this.Controls.Add(this.CbxMarca);
             this.Controls.Add(this.btnBuscar);
-            this.Controls.Add(this.txtBuscar);
-            this.Controls.Add(this.lblBuscar);
             this.Controls.Add(this.BtnCancelar);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.txtPrecio);
@@ -288,10 +279,9 @@ namespace ShopGestor
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblCod;
         private System.Windows.Forms.Label lblModificar;
-        private System.Windows.Forms.Label lblBuscar;
-        private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.ComboBox CbxMarca;
         private System.Windows.Forms.ComboBox CbxCategoria;
+        private System.Windows.Forms.Label lblMensaje;
     }
 }

@@ -32,16 +32,37 @@ namespace ShopGestor
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
+         
             Articulo articulo = new Articulo();
             ArticuloNegocio artNegocio = new ArticuloNegocio();
             articulo.marca = new Marca();
             articulo.categoria = new Categoria();
 
-            cargarArticulo(articulo);
+            try
+            {
+                cargarArticulo(articulo);
 
-            artNegocio.agregarArticulo(articulo);
+                artNegocio.buscarArticulo(articulo, 1);
+                if (articulo.id == -1 && articulo.codigo != "")
+                {
+                    artNegocio.agregarArticulo(articulo);
+                    limpiarForm();
+                    lblMensaje.Text = "El artículo " + articulo.codigo + " ha sido agregado exitosamente";
+                }
 
-            limpiarForm();
+                else if(articulo.codigo == "")
+                {
+                    MessageBox.Show("El campo Código no puede estar vacío", "Atención");
+                }
+                else
+                {
+                    MessageBox.Show("El código de articulo ya existe", "Atención");
+                }
+            }catch(System.FormatException ex)
+            {
+                MessageBox.Show("Valores ingresados para precio incorrecto.", "Atención!");
+            }
+            
             
         }
 
@@ -77,6 +98,8 @@ namespace ShopGestor
             btnAceptar.Enabled = false;
             CbxCategoria.Enabled = false;
             CbxMarca.Enabled = false;
+            CbxCategoria.DataSource = null;
+            CbxMarca.DataSource = null;
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -100,6 +123,10 @@ namespace ShopGestor
             btnAceptar.Enabled = true;
             CbxMarca.Enabled = true;
             CbxCategoria.Enabled = true;
+
+            lblMensaje.Text = "Ingrese los datos para el nuevo artículo";
         }
+
+
     }
 }

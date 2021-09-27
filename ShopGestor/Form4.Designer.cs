@@ -47,6 +47,7 @@ namespace ShopGestor
             this.btnNuevo = new System.Windows.Forms.Button();
             this.CbxCategoria = new System.Windows.Forms.ComboBox();
             this.CbxMarca = new System.Windows.Forms.ComboBox();
+            this.lblMensaje = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblAgregar
@@ -223,12 +224,23 @@ namespace ShopGestor
             this.CbxMarca.Size = new System.Drawing.Size(121, 21);
             this.CbxMarca.TabIndex = 23;
             // 
+            // lblMensaje
+            // 
+            this.lblMensaje.AutoSize = true;
+            this.lblMensaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMensaje.Location = new System.Drawing.Point(1, 410);
+            this.lblMensaje.Name = "lblMensaje";
+            this.lblMensaje.Size = new System.Drawing.Size(239, 13);
+            this.lblMensaje.TabIndex = 24;
+            this.lblMensaje.Text = "Presione NUEVO para agregar un nuevo artículo";
+            // 
             // FormAgregar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CadetBlue;
-            this.ClientSize = new System.Drawing.Size(686, 450);
+            this.ClientSize = new System.Drawing.Size(686, 426);
+            this.Controls.Add(this.lblMensaje);
             this.Controls.Add(this.CbxMarca);
             this.Controls.Add(this.CbxCategoria);
             this.Controls.Add(this.btnNuevo);
@@ -275,5 +287,6 @@ namespace ShopGestor
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.ComboBox CbxCategoria;
         private System.Windows.Forms.ComboBox CbxMarca;
+        private System.Windows.Forms.Label lblMensaje;
     }
 }

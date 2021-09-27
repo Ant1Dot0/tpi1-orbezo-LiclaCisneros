@@ -36,6 +36,7 @@ namespace ShopGestor
             this.BtnCancelar = new System.Windows.Forms.Button();
             this.PbxArticulo = new System.Windows.Forms.PictureBox();
             this.DgvResultado = new System.Windows.Forms.DataGridView();
+            this.lblMensaje = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.PbxArticulo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvResultado)).BeginInit();
             this.SuspendLayout();
@@ -44,6 +45,7 @@ namespace ShopGestor
             // 
             this.lblBuscar.AutoSize = true;
             this.lblBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBuscar.ForeColor = System.Drawing.SystemColors.ControlText;
             this.lblBuscar.Location = new System.Drawing.Point(252, 21);
             this.lblBuscar.Name = "lblBuscar";
             this.lblBuscar.Size = new System.Drawing.Size(159, 26);
@@ -110,12 +112,23 @@ namespace ShopGestor
             this.DgvResultado.TabIndex = 9;
             this.DgvResultado.SelectionChanged += new System.EventHandler(this.DgvResultado_SelectionChanged);
             // 
+            // lblMensaje
+            // 
+            this.lblMensaje.AutoSize = true;
+            this.lblMensaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMensaje.Location = new System.Drawing.Point(1, 319);
+            this.lblMensaje.Name = "lblMensaje";
+            this.lblMensaje.Size = new System.Drawing.Size(10, 13);
+            this.lblMensaje.TabIndex = 10;
+            this.lblMensaje.Text = ".";
+            // 
             // FormBuscar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CadetBlue;
-            this.ClientSize = new System.Drawing.Size(652, 324);
+            this.ClientSize = new System.Drawing.Size(652, 332);
+            this.Controls.Add(this.lblMensaje);
             this.Controls.Add(this.DgvResultado);
             this.Controls.Add(this.PbxArticulo);
             this.Controls.Add(this.BtnCancelar);
@@ -142,5 +155,6 @@ namespace ShopGestor
         private System.Windows.Forms.Button BtnCancelar;
         private System.Windows.Forms.PictureBox PbxArticulo;
         private System.Windows.Forms.DataGridView DgvResultado;
+        private System.Windows.Forms.Label lblMensaje;
     }
 }

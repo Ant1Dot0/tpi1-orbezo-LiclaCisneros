@@ -24,13 +24,13 @@ namespace ShopGestor
             Articulo auxArticulo = new Articulo();
             ArticuloNegocio auxNegocio = new ArticuloNegocio();
 
-            auxArticulo.id = int.Parse(txtBuscar.Text);
-            auxNegocio.buscarArticulo(auxArticulo, 0);
+            auxArticulo.codigo = txtCodigoArt.Text;
+            auxNegocio.buscarArticulo(auxArticulo, 1);
             if(auxArticulo.id != -1)
             {
                 cargarTexto(auxArticulo);
 
-                txtCodigoArt.Enabled = true;
+                
                 txtNombre.Enabled = true;
                 txtDescripcion.Enabled = true;
                 txtPrecio.Enabled = true;
@@ -38,9 +38,14 @@ namespace ShopGestor
                 CbxCategoria.Enabled = true;
                 CbxMarca.Enabled = true;
 
-                txtBuscar.Enabled = false;
+                txtCodigoArt.Enabled = false;
                 btnAceptar.Enabled = true;
-
+                lblMensaje.Text = "Ingrese valores a modificar.";
+                
+            }
+            else
+            {
+                lblMensaje.Text = "El artículo " + auxArticulo.codigo + " no existe.";
             }
             
 
@@ -68,16 +73,8 @@ namespace ShopGestor
 
         private void FormModificar_Load(object sender, EventArgs e)
         {
-            ArticuloNegocio auxNegocio = new ArticuloNegocio();
-            txtBuscar.Text = "" + (auxNegocio.getMaxId()-1);
-            txtCodigoArt.Enabled = false;
-            txtNombre.Enabled = false;
-            txtDescripcion.Enabled = false;
-            txtPrecio.Enabled = false;
-            txtImagen.Enabled = false;
-            CbxCategoria.Enabled = false;
-            CbxMarca.Enabled = false;
-            btnAceptar.Enabled = false;
+            limpiarForm();
+            lblMensaje.Text = "Ingrese código de artículo a modificar.";
         }
 
         private void btnAceptar_Click(object sender, EventArgs e)
@@ -87,26 +84,30 @@ namespace ShopGestor
             articulo.marca = new Marca();
             articulo.categoria = new Categoria();
 
-            cargarArticulo(articulo);
+            try
+            {
+                cargarArticulo(articulo);
 
-            artNegocio.modificarArticulo(articulo);
+                artNegocio.modificarArticulo(articulo);
 
-            limpiarForm();
+                limpiarForm();
 
-            btnBuscar.Enabled = true;
-            txtBuscar.Enabled = true;
-
+                btnBuscar.Enabled = true;
+                txtCodigoArt.Enabled = true;
+                lblMensaje.Text = "los datos para el artículo " + articulo.codigo + " han sido modificados exitósamente.";
+            }catch(System.FormatException ex)
+            {
+                MessageBox.Show("Valores ingresados para precio incorrecto.", "Atención!");
+            }
         }
 
         private void cargarArticulo(Articulo articulo)
         {
-            articulo.id = int.Parse(txtBuscar.Text);
             articulo.codigo = txtCodigoArt.Text;
             articulo.nombre = txtNombre.Text;
             articulo.descripcion = txtDescripcion.Text;
             articulo.Url = txtImagen.Text;
             articulo.precio = decimal.Parse(txtPrecio.Text);
-
             articulo.categoria = (Categoria)CbxCategoria.SelectedItem;
             articulo.marca = (Marca)CbxMarca.SelectedItem;
         }
@@ -114,21 +115,25 @@ namespace ShopGestor
         private void limpiarForm()
         {
             ///deshabilitar txtBox y limpiarlos
-            txtBuscar.Text = "";
             txtNombre.Text = "";
             txtCodigoArt.Text = "";
             txtDescripcion.Text = "";
             txtImagen.Text = "";
             txtPrecio.Text = "";
+            CbxCategoria.DataSource = null;
+            CbxMarca.DataSource = null;
 
             txtNombre.Enabled = false;
-            txtCodigoArt.Enabled = false;
             txtDescripcion.Enabled = false;
             txtImagen.Enabled = false;
             txtPrecio.Enabled = false;
 
+            txtCodigoArt.Enabled = true;
             btnBuscar.Enabled = true;
             btnAceptar.Enabled = false;
+            
+
+
         }
     }
 }
