@@ -280,11 +280,10 @@ namespace Negocio
                 conexion.ConnectionString = "server=.\\SQLEXPRESS; database=CATALOGO_DB; integrated security=true";
                 comando.CommandType = System.Data.CommandType.Text;
                 comando.CommandText = "UPDATE articulos " +
-                    "SET codigo = @codigo, Nombre = @Nombre, Descripcion = @descripcion, IdMarca = @marca, " +
+                    "SET  Nombre = @Nombre, Descripcion = @descripcion, IdMarca = @marca, " +
                     "IdCategoria = @categoria, ImagenUrl = @imagen, Precio = @precio " +
-                    "WHERE Id = @Id";
+                    "WHERE codigo = @codigo";
 
-                comando.Parameters.AddWithValue("@Id", articulo.id);
                 comando.Parameters.AddWithValue("@codigo", articulo.codigo);
                 comando.Parameters.AddWithValue("@Nombre", articulo.nombre);
                 comando.Parameters.AddWithValue("@descripcion", articulo.descripcion);
